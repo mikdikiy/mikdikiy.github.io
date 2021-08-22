@@ -18,3 +18,8 @@ li {
 #inp2 {
   background-color: cornflowerblue;
 }
+
+.gitimg {
+  display: inline;
+  border:2px solid black ;
+}
