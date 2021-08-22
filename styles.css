@@ -23,3 +23,65 @@ li {
   display: inline;
   border:2px solid black ;
 }
+/* task 6 */
+span.spn {
+  display: flex;
+  align-items: center;
+  border: 1px black solid;
+}
+p{
+  margin: 0px;
+  align-items: center;
+  margin: 3px;
+}
+input{
+  display: flex;
+  align-items: center;
+}
+
+span{
+  margin: 3px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;  
+}
+
+p.red {
+  color:  red;
+  text-decoration: underline;
+}
+
+p.green {
+  color: green;
+  text-decoration: underline;
+}
+
+p.blue {
+  color:  blue;
+  text-decoration: underline;
+}
+
+span.red {  
+  background-color: red;
+}
+
+
+span.green {
+  background-color: green;
+}
+
+span.blue {
+  background-color: blue;
+}
+
+input[name="red"]:checked~ span.red{  
+  display: none;
+}
+
+input[name="green"]:checked~ span.green{  
+  display: none;
+}
+
+input[name="blue"]:checked~ span.blue{  
+  display: none;
+}
