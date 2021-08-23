@@ -85,3 +85,73 @@ input[name="green"]:checked~ span.green{
 input[name="blue"]:checked~ span.blue{  
   display: none;
 }
+
+/* lesson 4 */
+
+menu.menu1{
+  display: flex;
+  background-color: #AF09FF;
+  padding: 0;
+  margin: 0;
+  
+}
+ul.menu1{
+  display: inline-block;
+  width: 900px;
+  padding: 0;
+  margin-left: 40px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  align-content: center;
+}
+ul.menu1>li{
+  display: inline;
+  color:white;
+  background-color: rgb(175, 174, 174,0);
+  font-family: 'Economica';
+  font-size: 25px;
+  font-weight: bold;
+  margin-inline: 5px;
+  padding: 2px;
+} 
+ul.menu1>li:hover{
+  color:#A0A0A0;
+  background-color: #EEEEEE;
+  padding: 2px;
+} 
+li.fl{
+  float: right;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+span.pager{
+  display: inline-block;
+  background-color: #FAFAFA;
+  padding: 0;
+  margin: 0;
+}
+ul.pager>li, .pager>p{
+  background-color: rgb(175, 174, 174,0);
+  color: #AF09FF;
+  font-family: 'Economica';
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+#next, #last {
+  align-self:right;
+  /* margin-top: -25px;
+  margin-bottom: -25px; */
+}
+#first, #prev {
+  align-self:left;
+  /* margin-top: -25px; */
+}
+ul.pager>li{
+  border: #DEDEDE solid;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+}
