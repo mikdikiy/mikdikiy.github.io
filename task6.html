@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>  
+  <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css"/>
   <title>Домашние задания</title>
 </head>
 <body>
-  Урок 3
-  <br><br>
+<h2>Урок 3</h2>
+
 <span class="spn">
   <input type="checkbox" name="red"/>
-  <p class="red">красные</p>
+  <p class="red">Скрыть красные</p>
   <input type="checkbox" name="green"/>
-  <p class="green">зеленые</p>
+  <p class="green">Скрыть зеленые</p>
   <input type="checkbox" name="blue"/>
-  <p class="blue">синие</p>
+  <p class="blue">Скрыть синие</p>
 
   <span class="red">красные</span>
   <span class="green">зеленые</span>
@@ -29,10 +32,10 @@
   <span class="green">зеленые</span>
   <span class="blue">синие</span>
 </span>
-<br><br>
-Урок 4
-<br><br>
-Markup menu.<br>
+
+<h2>Урок 4</h2>
+
+<h3>Markup menu</h3>
 <menu class="menu1">
   <ul class="menu1">
     <li>HOME</li>
@@ -45,8 +48,8 @@ Markup menu.<br>
   </ul>
 </menu>
 
-<br><br>
-Markup menu2.<br><br>
+
+<h3>Markup menu with float</h3>
 <menu class="menu1">
   <ul class="menu1">
     <li>HOME</li>
@@ -59,36 +62,73 @@ Markup menu2.<br><br>
     <li class="fl">MORE</li>
   </ul>
 </menu>
-<br><br>
-Pager.<br><br>
+
+<h3>Pager + JS</h3>
 <span class="pager">
   <p id="first"><< FIRST</p>&nbsp;<p id="prev"><< PREV</p>
-    <ul class="pager">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-    </ul>
+  <div id="pagerPage"></div>
   <p id="next">NEXT >></p>&nbsp;<p id="last">LAST >></p>
-  </span>
+</span>
 
+
+  <script type="text/javascript">
+  var maxPage=15;
+  var ni=0;
+  var np=1;
+  function addPage (ni){
+    let para = document.createElement("p");
+    let node = document.createTextNode(ni);
+    para.appendChild(node);
+    if (ni===np){para.classList.add("current")};
+    para.classList.add("pager");
+    para.setAttribute("id","idp"+ni);
+    let element = document.getElementById("pagerPage");
+    element.appendChild(para);
+  };
+  function isCurrent (np){
+    let para = document.getElementById("idp1");
+    let remClass = document.getElementsByClassName("current")[0];
+    remClass.classList.remove("current");
+    for (ni=1;ni<=maxPage;ni++){
+      para = document.getElementById("idp"+ni);  
+      if (ni===np){para.classList.add("current")};
+    };  
+  }
+
+  for (ni=1;ni<=maxPage;ni++){
+    addPage(ni);
+  };
+    
+  first.onclick=function (){
+    np=1;
+    isCurrent(np);
+  };
+  last.onclick=function (){
+    np=maxPage;
+    isCurrent(np);
+    
+  };
+  prev.onclick=function (){
+    if (np>1){
+      np--;
+      isCurrent(np);
+      };
+  };
+  next.onclick=function (){
+    if (np<maxPage){
+    np++;
+    isCurrent(np);
+    };
+  };
+  pagerPage.onclick = function (event){
+    let target = event.target;
+    console.log(target.id.replace("idp",""))
+    if (target.id.replace("idp","")!='pagerPage'){
+      np=Number(target.id.replace("idp",""));
+      isCurrent(np);
+    }
+  };
+
+  </script>
 </body>
 </html>

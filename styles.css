@@ -1,33 +1,16 @@
-.menu {
-  background-color:  rgb(175, 174, 174);
-  border: 2px solid black;
-}
 
-ul {
-  list-style-type: none;
-}
-
-li {
-  background-color: cadetblue;
-}
-
-
-.yellow{
-  background-color: burlywood;
-}
-#inp2 {
-  background-color: cornflowerblue;
-}
-
-.gitimg {
-  display: inline;
-  border:2px solid black ;
-}
 /* task 6 */
+h2,h3{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: black;
+  text-align: center;
+}
+h3{
+  font-style:oblique;
+}
 span.spn {
   display: flex;
   align-items: center;
-  border: 1px black solid;
 }
 p{
   margin: 0px;
@@ -125,33 +108,38 @@ li.fl{
   margin-bottom: -2px;
 }
 span.pager{
-  display: inline-block;
+  display: block;
+  color: #AF09FF;
   background-color: #FAFAFA;
   padding: 0;
   margin: 0;
-}
-ul.pager>li, .pager>p{
-  background-color: rgb(175, 174, 174,0);
-  color: #AF09FF;
   font-family: 'Economica';
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  margin-left:auto;
-  margin-right:auto;
+  text-align: center;
+  user-select: none;
 }
-#next, #last {
-  align-self:right;
-  /* margin-top: -25px;
-  margin-bottom: -25px; */
+#first, #prev, #next, #last{
+  display: inline;
 }
-#first, #prev {
-  align-self:left;
-  /* margin-top: -25px; */
+div#pagerPage{
+  display: inline-block;
+  color: #AF09FF;
 }
-ul.pager>li{
-  border: #DEDEDE solid;
-  height: 25px;
-  width: 25px;
+div#pagerPage>p{
+  display: inline-block;
+  border: 2px solid rgb(167, 165, 165,50);
   border-radius: 5px;
+  width: 20px;
 }
+p.current{
+  background-color: rgb(167, 167, 167);
+}
+p.pager:hover{
+  background-color: #AF09FF;
+  color: white;
+}
+#first:hover, #prev:hover, #next:hover, #last:hover {
+  background-color: #AF09FF;
+  color: white;
+}
+
