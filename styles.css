@@ -1,13 +1,6 @@
 
 /* task 6 file */
-@font-face {
-  font-family: "Economica";
-  font-style: normal;
-  font-weight: 400;
-    src: 
-       url("/fonts/Economica-Regular.woff2") format("woff2"),
-       url("/fonts/Economica-Regular.woff") format("woff");
-}
+
 h2,h3{
   font-family: "Economica";
   color: black;
@@ -83,8 +76,7 @@ menu.menu1{
   display: flex;
   background-color: #AF09FF;
   padding: 0;
-  margin: 0;
-  
+  margin: 0;  
 }
 ul.menu1{
   display: inline-block;
@@ -105,7 +97,7 @@ ul.menu1>li{
   margin-inline: 5px;
   padding: 2px;
 } 
-ul.menu1>li:hover{
+ul.menu1>li:hover, ul.menu2>li:hover{
   color:#A0A0A0;
   background-color: #EEEEEE;
   padding: 2px;
@@ -115,6 +107,7 @@ li.fl{
   margin-top: -2px;
   margin-bottom: -2px;
 }
+/* pager */
 span.pager{
   display: block;
   color: #AF09FF;
@@ -150,4 +143,62 @@ p.pager:hover{
   background-color: #AF09FF;
   color: white;
 }
+/* Menu2 */
+menu.menu2{
+  display: flex;
+  background-color: #1AA4FF;
+  padding: 0;
+  margin: 0;  
+}
 
+ul.menu2{
+  display: inline-block;
+  width: 900px;
+  padding: 0;
+  margin-left: 40px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  align-content: center;
+}
+ul.menu2>li{
+  display: inline;
+  color:white;
+  background-color: rgb(175, 174, 174,0);
+  font-family: "Economica";
+  font-size: 25px;
+  font-weight: bold;
+  margin-inline: 5px;
+  padding: 2px;
+} 
+
+/* submenu Доработать!!!!!!!!!!!*/
+
+menu.submenu1{
+  display: flex;
+  background-color: #EEEEEE;
+  padding: 0;
+  margin: 0;  
+}
+ul.submenu1{
+  display: inline-block;
+  width: 900px;
+  padding: 0;
+  margin-left: 40px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  align-content: center;
+}
+ul.submenu1>li{
+  display: inline;
+  color:#A0A0A0;
+  background-color: rgb(175, 174, 174,0);
+  font-family: "Economica";
+  font-size: 25px;
+  font-weight: bold;
+  margin-inline: 5px;
+  padding: 2px;
+} 
+
+menu.submenu1{
+  display: none;
+}
