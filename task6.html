@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href = "fonts/stylesheet.css" rel = "stylesheet" type = "text/css" />
   <link rel="stylesheet" type="text/css" href="styles.css"/>
   <title>Домашние задания</title>
 </head>
 <body>
-<h2>Урок 3</h2>
-
+<h2>Lesson 3</h2>
 <span class="spn">
   <input type="checkbox" name="red"/>
   <p class="red">Скрыть красные</p>
@@ -33,7 +29,7 @@
   <span class="blue">синие</span>
 </span>
 
-<h2>Урок 4</h2>
+<h2>Lesson 4</h2>
 
 <h3>Markup menu</h3>
 <menu class="menu1">
@@ -72,61 +68,61 @@
 
 
   <script type="text/javascript">
-  var maxPage=15;
-  var ni=0;
-  var np=1;
-  function addPage (ni){
-    let para = document.createElement("p");
-    let node = document.createTextNode(ni);
-    para.appendChild(node);
-    if (ni===np){para.classList.add("current")};
-    para.classList.add("pager");
-    para.setAttribute("id","idp"+ni);
-    let element = document.getElementById("pagerPage");
-    element.appendChild(para);
-  };
-  function isCurrent (np){
-    let para = document.getElementById("idp1");
-    let remClass = document.getElementsByClassName("current")[0];
-    remClass.classList.remove("current");
-    for (ni=1;ni<=maxPage;ni++){
-      para = document.getElementById("idp"+ni);  
+    var maxPage=15;
+    var ni=0;
+    var np=1;
+    function addPage (ni){
+      let para = document.createElement("p");
+      let node = document.createTextNode(ni);
+      para.appendChild(node);
       if (ni===np){para.classList.add("current")};
-    };  
-  }
+      para.classList.add("pager");
+      para.setAttribute("id","idp"+ni);
+      let element = document.getElementById("pagerPage");
+      element.appendChild(para);
+    };
+    function isCurrent (np){
+      let para = document.getElementById("idp1");
+      let remClass = document.getElementsByClassName("current")[0];
+      remClass.classList.remove("current");
+      for (ni=1;ni<=maxPage;ni++){
+        para = document.getElementById("idp"+ni);  
+        if (ni===np){para.classList.add("current")};
+      };  
+    }
 
-  for (ni=1;ni<=maxPage;ni++){
-    addPage(ni);
-  };
-    
-  first.onclick=function (){
-    np=1;
-    isCurrent(np);
-  };
-  last.onclick=function (){
-    np=maxPage;
-    isCurrent(np);
-    
-  };
-  prev.onclick=function (){
-    if (np>1){
-      np--;
+    for (ni=1;ni<=maxPage;ni++){
+      addPage(ni);
+    };
+      
+    first.onclick=function (){
+      np=1;
+      isCurrent(np);
+    };
+    last.onclick=function (){
+      np=maxPage;
+      isCurrent(np);
+      
+    };
+    prev.onclick=function (){
+      if (np>1){
+        np--;
+        isCurrent(np);
+        };
+    };
+    next.onclick=function (){
+      if (np<maxPage){
+      np++;
       isCurrent(np);
       };
-  };
-  next.onclick=function (){
-    if (np<maxPage){
-    np++;
-    isCurrent(np);
     };
-  };
-  pagerPage.onclick = function (event){
-    let target = event.target;
-    console.log(target.id.replace("idp",""))
-    if (target.id.replace("idp","")!='pagerPage'){
-      np=Number(target.id.replace("idp",""));
-      isCurrent(np);
-    }
+    pagerPage.onclick = function (event){
+      let target = event.target;
+      console.log(target.id.replace("idp",""))
+      if (target.id.replace("idp","")!='pagerPage'){
+        np=Number(target.id.replace("idp",""));
+        isCurrent(np);
+      }
   };
 
   </script>

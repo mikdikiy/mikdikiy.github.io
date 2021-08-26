@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Economica';
+    src: local('Economica Regular'), local('Economica-Regular'),
+        url('Economica-Regular.woff2') format('woff2'),
+        url('Economica-Regular.woff') format('woff'),
+        url('Economica-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
