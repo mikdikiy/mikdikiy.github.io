@@ -257,3 +257,57 @@ li.more:hover ul.submenu1>li
 {
   display: inline;
 }
+
+/* BANNER */
+div.banner{
+  display: block;
+  font-size:22px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 310px;
+  text-align: center;
+  font-family: 'Economica';
+  color:white;
+  background-color: #EE8129;
+  border: 2px solid #EE8129;
+}
+div.banner2{
+  display: block;
+  border-left:2px solid #EE8129;
+  border-right:2px solid #EE8129;
+  border-bottom:2px solid #EE8129;
+  background-color: white;
+  box-shadow: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 310px;
+  text-align: center;
+  font-family: 'Economica'; 
+}
+div.banner3{
+  display: block;
+  font-size:22px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+span.banner{
+  display: inline-flex;
+  color: #35495A;
+  margin-top: 0;
+}
+#dollar{
+  font-size:16px;
+}
+#price{
+  font-size:50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#period{
+  font-size: 13px;
+  margin-top: 40px;
+}
