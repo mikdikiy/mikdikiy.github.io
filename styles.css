@@ -97,7 +97,7 @@ ul.menu1>li{
   margin-inline: 5px;
   padding: 2px;
 } 
-ul.menu1>li:hover, ul.menu2>li:hover{
+ul.menu1>li:hover{
   color:#A0A0A0;
   background-color: #EEEEEE;
   padding: 2px;
@@ -149,6 +149,7 @@ menu.menu2{
   background-color: #1AA4FF;
   padding: 0;
   margin: 0;  
+  position: relative;
 }
 
 ul.menu2{
@@ -171,25 +172,40 @@ ul.menu2>li{
   padding: 2px;
 } 
 
-/* submenu Доработать!!!!!!!!!!!*/
+/* submenu*/
+ul.menu2>li:hover,
+ul.submenu1>li:hover
+{
+  color:#858585;
+  background-color: #EEEEEE;
+  padding: 2px;
+} 
+
+.submenu1{
+  display: none;
+}
 
 menu.submenu1{
-  display: flex;
+  /* display: inline; */
   background-color: #EEEEEE;
   padding: 0;
   margin: 0;  
+  position: absolute;
+  top: 33px;
+  left: 0;
 }
 ul.submenu1{
-  display: inline-block;
+  /* display: inline-block; */
   width: 900px;
   padding: 0;
   margin-left: 40px;
   margin-top: 2px;
   margin-bottom: 2px;
   align-content: center;
+  /* text-align: center; */
 }
 ul.submenu1>li{
-  display: inline;
+  /* display: inline; */
   color:#A0A0A0;
   background-color: rgb(175, 174, 174,0);
   font-family: "Economica";
@@ -199,6 +215,53 @@ ul.submenu1>li{
   padding: 2px;
 } 
 
-menu.submenu1{
-  display: none;
+li.home:hover menu.submenu1,
+li.news:hover menu.submenu1,
+li.economic:hover menu.submenu1,
+li.local:hover menu.submenu1,
+li.sport:hover menu.submenu1,
+li.culture:hover menu.submenu1,
+li.travels:hover menu.submenu1,
+li.living:hover menu.submenu1,
+li.money:hover menu.submenu1,
+li.technology:hover menu.submenu1,
+li.more:hover menu.submenu1
+{
+  display: inline;
 }
+
+li.home:hover ul.submenu1,
+li.news:hover ul.submenu1,
+li.economic:hover ul.submenu1,
+li.local:hover ul.submenu1,
+li.sport:hover ul.submenu1,
+li.culture:hover ul.submenu1,
+li.travels:hover ul.submenu1,
+li.living:hover ul.submenu1,
+li.money:hover ul.submenu1,
+li.technology:hover ul.submenu1,
+li.more:hover ul.submenu1
+{
+  display: inline-block;
+}
+
+li.home:hover ul.submenu1>li,
+li.news:hover ul.submenu1>li,
+li.economic:hover ul.submenu1>li,
+li.local:hover ul.submenu1>li,
+li.sport:hover ul.submenu1>li,
+li.culture:hover ul.submenu1>li,
+li.travels:hover ul.submenu1>li,
+li.living:hover ul.submenu1>li,
+li.money:hover ul.submenu1>li,
+li.technology:hover ul.submenu1>li,
+li.more:hover ul.submenu1>li
+{
+  display: inline;
+}
+
+/* ul.submenu1>li:hover{
+  color:#858585;
+  background-color: #EEEEEE;
+  padding: 2px;
+}  */
