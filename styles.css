@@ -274,6 +274,8 @@ div.banner{
   color:white;
   background-color: #EE8129;
   border: 2px solid #EE8129;
+
+  align-content: center;
 }
 div.banner2{
   display: block;
@@ -310,4 +312,30 @@ span.banner{
 #period{
   font-size: 13px;
   margin-top: 40px;
+}
+ul.banner{
+  list-style-type: none;
+  font-size: 22px;
+  margin-left:  auto;
+  margin-right:  auto;
+  padding-left: 0;
+  width: 260px;
+
+}
+img.banner{
+  margin-left: 35px;
+  margin-right: 17px;
+  height: 16px;
+}
+div.banner4{
+  display:flex;
+  padding: 5px;
+  
+  margin-right: auto;
+  margin-bottom: 2px;
+  margin-top:0;
+  background-color: #EDF5FD;
+}
+div.banner4 li{
+  text-align: right;
 }
