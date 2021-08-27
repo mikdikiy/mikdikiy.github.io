@@ -274,14 +274,18 @@ div.banner{
   color:white;
   background-color: #EE8129;
   border: 2px solid #EE8129;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   align-content: center;
+  box-shadow:0 0 15px rgb(167, 165, 165,50);
 }
 div.banner2{
   display: block;
   border-left:2px solid #EE8129;
   border-right:2px solid #EE8129;
   border-bottom:2px solid #EE8129;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: white;
   box-shadow: black;
   margin-left: auto;
@@ -289,38 +293,43 @@ div.banner2{
   padding: 0;
   width: 310px;
   text-align: center;
-  font-family: 'Economica'; 
+  font-family: 'Economica';
+  box-shadow:
+  0 10px 15px rgb(167, 165, 165,50);
 }
 div.banner3{
   display: block;
   font-size:22px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 span.banner{
   display: inline-flex;
   color: #35495A;
   margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 #dollar{
-  font-size:16px;
+  font-size:18px;
 }
 #price{
-  font-size:50px;
+  font-size:70px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #period{
-  font-size: 13px;
-  margin-top: 40px;
+  font-size: 16px;
+  margin-top: 60px;
 }
 ul.banner{
   list-style-type: none;
-  font-size: 22px;
+  font-size: 18px;
   margin-left:  auto;
   margin-right:  auto;
   padding-left: 0;
   width: 260px;
-
+  color:#888C94;
 }
 img.banner{
   margin-left: 35px;
@@ -330,12 +339,30 @@ img.banner{
 div.banner4{
   display:flex;
   padding: 5px;
-  
   margin-right: auto;
   margin-bottom: 2px;
   margin-top:0;
+}
+div.banner4:nth-child(odd){
   background-color: #EDF5FD;
+}
+div.banner4:nth-child(even){
+  background-color: #F5F5F6;
 }
 div.banner4 li{
   text-align: right;
+}
+button.banner{
+  background-color: #EE8129;
+  color: white;
+  border:none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 22px;
+  border-radius: 5px;
+  width: 240px;
+  text-decoration: none;
+}
+button.banner:hover{
+  box-shadow: 0 2px 5px #1E1E1E;
 }
